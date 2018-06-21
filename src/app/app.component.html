@@ -1,13 +1,23 @@
-<mat-sidenav-container class="example-container">
-  <mat-sidenav #sidenav [opened]="opened" mode="side">
-    <p>
-      <button mat-button (click)="sidenav.toggle()">Toggle</button>
-    </p>
-  </mat-sidenav>
+<div class="mat-app-background basic-container">
 
-  <mat-sidenav-content>
-    <p>
-      <button mat-button (click)="sidenav.toggle()">TOGGLE</button>
-    </p>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+  <mat-toolbar class="navbar">
+    <span>MyLivery</span>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="sidenav-container">
+
+    <mat-sidenav #sidenav [opened]="opened" mode="side" class="sidenav">
+      <p>
+        <button mat-button (click)="sidenav.toggle()">Toggle</button>
+      </p>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="main">
+      <p>
+        <button mat-button (click)="sidenav.toggle()">TOGGLE</button>
+      </p>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+
+</div>
